@@ -1,10 +1,14 @@
 import Head from 'next/head'
 import { v4 as uuidv4 } from 'uuid';
 
-const time = new Date().toLocaleString();
-const uuid = uuidv4();
+export function buildHash() {
+  const time = new Date();
+  const uuid = uuidv4();
+  return [uuid, time];
+}
 
 export default function Home() {
+  const hash = buildHash();
   return (
     <div className="container">
       <Head>
@@ -17,8 +21,8 @@ export default function Home() {
           Welcome to the Jenkins Test!
         </h1>
 
-        <p>ID: {uuid}</p>
-        <p>Built: {time}</p>
+        <p>ID: {hash[0]}</p>
+        <p>Built: {hash[1].toLocaleString()}</p>
       </main>
     </div>
   )
