@@ -1,5 +1,5 @@
 target
-test
+src/main/webapp/test
 junit.xml
 
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.

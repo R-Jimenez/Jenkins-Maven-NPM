@@ -1,4 +1,4 @@
-const buildHash = require('./index').buildHash;
+const buildHash = require('../pages/index').buildHash;
 
 //
 const testData = buildHash();
